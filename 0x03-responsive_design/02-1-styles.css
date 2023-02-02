@@ -429,12 +429,8 @@
     .section-latest-news .row {
       flex-direction: column;
     }
-
-    .abt-img {
-      width: 90%;
-      height: auto;
-    }
   }
+
   
   /* Section SERVICES
       ============================= */
