@@ -1,6 +1,12 @@
 /* My style */
-body {
-  .container {
-      color: #3D3D3D;
-  }
+@mixin margin($mg: 10px){
+  margin-left: $mg;
+  margin-right: $mg;
 }
+  body {
+    @include margin;
+  }
+  
+  div {
+    @include margin($mg: 15px);
+  }
