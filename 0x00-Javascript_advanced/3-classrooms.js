@@ -1,13 +1,12 @@
 function createClassRoom(numberOfStudents) {
   function studentSeat(seat) {
-    function returnSeatNumber() {
+    return function seatNumber() {
       return seat;
     }
-    return returnSeatNumber();
   }
   let students = [];
-  for(let i = 1; i === numberOfStudents; i++) {
-    students[i] = studentSeat(i);
+  for (let i = 1; i <= numberOfStudents; i++) {
+    students.push(studentSeat(i));
   }
   return students;
 }
