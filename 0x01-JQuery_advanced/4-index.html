@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+
+        <meta charset="utf-8" />
+        <title>Task 3</title>
+        <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+        <script type="application/javascript">
+          function createFamilyTree() {
+            let l = "Salva";
+            let tbl = $("<table></table>");
+            let thead = $("<thead></thead>");
+            let tbody = $("<tbody></tbody>");
+            let trOne = $("<tr></tr>").addClass("first");
+            let trTwo = $("<tr></tr>").addClass("second");
+            let trThree = $("<tr></tr>").addClass("third");
+            let trFour = $("<tr></tr>").addClass("fourth");
+            let thOne = $("<th></th>").text("Firstname");
+            let thTwo = $("<th></th>").text("Lastname");
+            let tdOne = $("<td></td>").text("Guillaume");
+            let tdTwo = $("<td></td>").text(l);
+            let tdThree = $("<td></td>").text("Paulette");
+            let tdFour = $("<td></td>").text(l);
+            let tdFive = $("<td></td>").text("Antoine");
+            let tdSix = $("<td></td>").text(l);
+      
+            trOne.append(thOne);
+            trOne.append(thTwo);
+      
+            trTwo.append(tdOne);
+            trTwo.append(tdTwo);
+      
+            trThree.append(tdThree);
+            trThree.append(tdFour);
+      
+            trFour.append(tdFive);
+            trFour.append(tdSix);
+      
+            thead.append(trOne);
+            tbody.append(trTwo);
+            tbody.append(trThree);
+            tbody.append(trFour);
+      
+            tbl.append(thead);
+            tbl.append(tbody);
+      
+            $('body').append(tbl);
+          }
+          function replaceFamilyTree() {
+            let tbody = $("tbody");
+            tbody.empty(); // Remove existing rows from tbody
+
+            let newRow = $("<tr></tr>");
+            let newCellOne = $("<td></td>").text("Gerard");
+            let newCellTwo = $("<td></td>").text("Bonissa");
+            newRow.append(newCellOne);
+            newRow.append(newCellTwo);
+            tbody.append(newRow);
+          }
+
+
+          $(document).ready(function() {
+            createFamilyTree();
+            replaceFamilyTree();
+          });
+          
+        </script>
+    </head>
+
+    <body>
+
+    </body>
+
+</html>
